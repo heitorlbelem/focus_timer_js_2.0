@@ -18,16 +18,29 @@
     <div id="app">
       <div id="countdown">
         <div id="timer">
-          <span>25</span>
+          <span id="minutes">25</span>
           <span>:</span>
-          <span>00</span>
+          <span id="seconds">00</span>
         </div>
 
         <div id="controls">
-          <button class="ph-bold ph-play-circle"></button>
-          <button class="ph-bold ph-stop-circle"></button>
-          <button class="ph-bold ph-plus-circle"></button>
-          <button class="ph-bold ph-minus-circle"></button>
+          <button
+            data-action="toggleRunning"
+            class="ph-bold ph-play-circle"
+          ></button>
+          <button
+            data-action="toggleRunning"
+            class="ph-bold ph-pause-circle"
+          ></button>
+          <button data-action="reset" class="ph-bold ph-stop-circle"></button>
+          <button
+            data-action="increment"
+            class="ph-bold ph-plus-circle"
+          ></button>
+          <button
+            data-action="decrement"
+            class="ph-bold ph-minus-circle"
+          ></button>
         </div>
       </div>
       <div id="sound-controls">

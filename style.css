@@ -18,6 +18,11 @@
   --button-selected-color: hsl(0, 0%, 100%);
 }
 
+html.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
+}
+
 body {
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
