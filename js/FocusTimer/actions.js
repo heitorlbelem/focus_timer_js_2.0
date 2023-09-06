@@ -7,10 +7,6 @@ export function toggleRunning() {
   timer.countdown()
 }
 
-export function reset() {
-  timer.updateDisplay()
-}
-
 export function increment() {
   timer.increment()
 }
