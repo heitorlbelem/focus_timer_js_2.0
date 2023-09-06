@@ -7,6 +7,12 @@ export function toggleRunning() {
   timer.countdown()
 }
 
+export function reset() {
+  document.documentElement.classList.remove("running")
+
+  timer.restart()
+}
+
 export function increment() {
   timer.increment()
 }

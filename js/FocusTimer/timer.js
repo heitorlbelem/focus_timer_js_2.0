@@ -1,5 +1,6 @@
+import state, { resetState } from "./state.js"
+
 import * as elements from "./elements.js"
-import state from "./state.js"
 
 export function countdown() {
   clearInterval(state.countdownId)
@@ -29,6 +30,12 @@ export function countdown() {
   state.countdownId = setInterval(() => countdown(), 1000)
 }
 
+export function restart() {
+  clearInterval(state.countdownId)
+  resetState()
+  updateDisplay()
+}
+
 export function increment() {
   let minutes = state.minutes + 5
 
@@ -41,6 +48,9 @@ export function increment() {
 
 export function decrement() {
   let minutes = state.minutes - 5
+
+  if (minutes < 0) return
+
   state.minutes = minutes
 
   updateDisplay()
