@@ -83,3 +83,29 @@ button {
     background-color: var(--button-selected-bg-color);
   }
 }
+
+@media (min-width: 1024px) {
+  #app {
+    display: flex;
+    flex-direction: row;
+    gap: 20rem;
+  }
+
+  #timer {
+    font-size: 12.6rem;
+  }
+
+  #controls button {
+    font-size: 4.8rem;
+  }
+
+  #sound-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #sound-controls button {
+    width: 14rem;
+    height: 14rem;
+  }
+}
