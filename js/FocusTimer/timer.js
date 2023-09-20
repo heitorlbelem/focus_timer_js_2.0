@@ -46,7 +46,7 @@ export function increment() {
 
   state.minutes = minutes
 
-  updateDisplay(minutes, seconds)
+  updateDisplay()
 }
 
 export function decrement() {
